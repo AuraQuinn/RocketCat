@@ -238,6 +238,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Launch.cs" />
+    <Compile Include="Assets\LaunchEnd.cs" />
+    <Compile Include="Assets\ObjectSpawner.cs" />
     <Compile Include="Assets\PowerUI.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

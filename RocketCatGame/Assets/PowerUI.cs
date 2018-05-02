@@ -16,6 +16,6 @@ public class PowerUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         LaunchPowerRef = LaunchRef.LaunchPower;
-        transform.localScale = new Vector3(0.25F, LaunchPowerRef + 1, 1);
+        transform.localScale = new Vector3(0.5F, 2* (LaunchPowerRef/10 + 1), 2);
 	}
 }

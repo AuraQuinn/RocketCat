@@ -6,8 +6,9 @@ public class Launch : MonoBehaviour {
     public float LaunchRotation;
     public float LaunchPower;
     public bool canRotate = true;
-    public bool canLaunch = false;
+    public bool powerSelectMode = false;
 
+    public Rigidbody2D CatRigid;
 
 	// Use this for initialization
 	void Start () {
@@ -21,22 +22,28 @@ public class Launch : MonoBehaviour {
             LaunchRotation = (Mathf.Sin(Time.time * 2) * 1);
             transform.Rotate(Vector3.forward * (LaunchRotation * 2));
         }
-        if (canLaunch == true)
+        if (powerSelectMode == true)
         {
-            LaunchPower = (Mathf.Sin(Time.time * 8) * 1);
+            LaunchPower = (Mathf.Sin(Time.time * 8) * 20);
+            LaunchPower = Mathf.Clamp(LaunchPower, 5, 20);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (canRotate == true)
             {
                 canRotate = false;
-                canLaunch = true;
-            }
-            else if (canLaunch == true)
-            {
-                canLaunch = false;
-                Physics2D.autoSimulation = true;
+                powerSelectMode = true;
             }
         }
-	}
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            if (powerSelectMode == true)
+            {
+                powerSelectMode = false;
+                Physics2D.autoSimulation = true;
+                CatRigid.AddForce(transform.right * LaunchPower, ForceMode2D.Impulse);
+            }
+        }
+    }
 }
