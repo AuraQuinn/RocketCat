@@ -370,6 +370,7 @@ GameObject:
   - component: {fileID: 990533120}
   - component: {fileID: 990533119}
   - component: {fileID: 990533122}
+  - component: {fileID: 990533123}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -474,6 +475,26 @@ MonoBehaviour:
   LaunchPower: 0
   canRotate: 1
   canLaunch: 0
+--- !u!50 &990533123
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 990533118}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1260207911
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +505,7 @@ GameObject:
   - component: {fileID: 1260207913}
   - component: {fileID: 1260207912}
   - component: {fileID: 1260207914}
+  - component: {fileID: 1260207915}
   m_Layer: 0
   m_Name: Launcher
   m_TagString: Untagged
@@ -563,6 +585,26 @@ MonoBehaviour:
   LaunchPower: 0
   canRotate: 1
   canLaunch: 0
+--- !u!50 &1260207915
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1260207911}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 3
 --- !u!1 &1468972147
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,7 +668,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: fd66c11e3f87bcc42a6a48acf0c97636, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -644,7 +686,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1468972147}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.5, y: 0, z: 0}
+  m_LocalPosition: {x: 8.5, y: -4, z: 0}
   m_LocalScale: {x: 0.25, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

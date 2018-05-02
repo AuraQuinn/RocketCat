@@ -11,7 +11,8 @@ public class Launch : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	}
+        Physics2D.autoSimulation = false;
+    }
 
     // Update is called once per frame
     void Update () {
@@ -22,7 +23,7 @@ public class Launch : MonoBehaviour {
         }
         if (canLaunch == true)
         {
-            LaunchPower = (Mathf.Sin(Time.time * 2) * 1);
+            LaunchPower = (Mathf.Sin(Time.time * 8) * 1);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -30,15 +31,11 @@ public class Launch : MonoBehaviour {
             {
                 canRotate = false;
                 canLaunch = true;
-                print(LaunchRotation);
-                print(canRotate);
-                print(canLaunch);
             }
             else if (canLaunch == true)
             {
                 canLaunch = false;
-                print(LaunchPower);
-                print(canLaunch);
+                Physics2D.autoSimulation = true;
             }
         }
 	}
