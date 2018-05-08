@@ -24,8 +24,8 @@ public class Launch : MonoBehaviour {
         }
         if (powerSelectMode == true)
         {
-            LaunchPower = (Mathf.Sin(Time.time * 8) * 20);
-            LaunchPower = Mathf.Clamp(LaunchPower, 5, 20);
+            LaunchPower = (Mathf.Sin(Time.time * 8) * 160);
+            LaunchPower = Mathf.Clamp(LaunchPower, 20, 160);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
