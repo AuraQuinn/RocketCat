@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Launch : MonoBehaviour
@@ -39,7 +40,7 @@ public class Launch : MonoBehaviour
                 powerSelectMode = true;
             }
             if (Time.timeScale == 0) {
-                Application.LoadLevel(Application.loadedLevel);
+                Application.Quit();
             }
         }
 
