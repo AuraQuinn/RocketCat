@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour {
+    public GameObject Launcher;
+
+
 
 	// Use this for initialization
 	void Start () {

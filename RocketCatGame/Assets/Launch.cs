@@ -10,8 +10,11 @@ public class Launch : MonoBehaviour
     public bool canRotate = true;
     public bool powerSelectMode = false;
     public bool isFalling;
-
+    public bool isActive = false;
     public Rigidbody2D CatRigid;
+
+    public GameObject ObjectSpawner;
+
 
     // Use this for initialization
     void Start()
@@ -50,8 +53,15 @@ public class Launch : MonoBehaviour
             {
                 powerSelectMode = false;
                 Physics2D.autoSimulation = true;
+                isActive = true;
+                ObjectSpawner.SetActive(true);
                 CatRigid.AddForce(transform.right * LaunchPower, ForceMode2D.Impulse);
             }
+        }
+
+        if (isActive == true)
+        {
+
         }
 
         if (CatRigid.velocity.y < 0)
@@ -59,7 +69,6 @@ public class Launch : MonoBehaviour
             StartCoroutine(BlinkTimer());
         }
     }
-
     IEnumerator BlinkTimer()
     {
 
